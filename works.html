@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corben:wght@700&family=Cormorant+Garamond:wght@400;500;600;700&family=Covered+By+Your+Grace&family=Libre+Baskerville:wght@400;700&family=Love+Light&family=Lusitana&family=Megrim&family=Montserrat&family=Nunito&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Mahsa Shahidi - Works</title>
+  </head>
+  <body>
+    <div class="projects">
+      <div class="noise">
+        <div class="cursor inner">
+          <span class="mouse"> View Project </span>
+        </div>
+        <h1>Works</h1>
+        <a href="/index.html">Back to homepage</a>
+        <div class="container">
+          <div class="block block-1">
+            <a href="#"><img src="/assets/images/landing.png" alt="" /></a>
+            <h2>Landing Page</h2>
+            <div class="notes">
+              <p>
+                A design of a minimal landing page for a new-media art website
+                was one of the earliest front-end developing experiences I've
+                had. This project is built usong HTML, CSS, and Javascript.
+              </p>
+            </div>
+          </div>
+
+          <div class="block block-2">
+            <a href="#"><img src="/assets/images/weather.png" alt="" /></a>
+            <h2>Weather App</h2>
+            <div class="notes">
+              <p>
+                With the skills I gained from the SheCodes workshops, I built a
+                Vanilla JavaScript weather app. Built using HTML, CSS,
+                JavaScript. Two APIs have been used for this project, one for
+                weather report and forecast, and the other for moon phase.
+              </p>
+            </div>
+          </div>
+
+          <div class="block block-3">
+            <a href="#"><img src="/assets/images/login.png" alt="" /></a>
+            <h2>Login Form</h2>
+            <div class="notes">
+              <p>
+                Design of a glassmorphism login form with hover effect. Built
+                using HTML, CSS, and JavaScript.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script/index.js"></script>
+    <script>
+      let blocks = document.getElementsByClassName("block");
+      let container = document.getElementsByClassName("container");
+      let scroll = new HorizontalScroll.default({
+        blocks: blocks,
+        container: container,
+        isAnimated: true,
+        springEffect: 5,
+        skewReducer: 20,
+      });
+
+      const cursor = document.querySelectorAll(".cursor");
+      const links = document.querySelectorAll(".block");
+
+      window.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.forEach((el) => {
+          el.style.left = `${x}px`;
+          el.style.top = `${y}px`;
+
+          links.forEach((link) => {
+            link.addEventListener("mouseenter", () => {
+              el.classList.add("hover");
+            });
+            link.addEventListener("mouseleave", () => {
+              el.classList.remove("hover");
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
