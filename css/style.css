@@ -369,3 +369,42 @@ hr {
   font-size: 13px;
   margin: 1px;
 }
+/* about */
+.about-content {
+  position: relative;
+  overflow: hidden;
+  font-family: var(--header-font);
+  margin: 2rem 10rem;
+  z-index: 1;
+}
+
+svg {
+  width: 45%;
+  filter: blur(10px);
+  position: absolute;
+  background: transparent;
+}
+
+svg path {
+  transition: 1.5s all ease-in-out;
+  z-index: -1;
+}
+
+svg:hover path {
+  d: path(
+    "M397.2027972027972 276.9230769230769C650 0 895.1048951048951 462.93706293706293 400 700 -95.10489510489509 462.93706293706293 150 0 397.2027972027972 276.9230769230769Z"
+  );
+  fill: url(#my-cool-gradient) #447799;
+}
+.ha {
+  animation: move 20s infinite alternate;
+  z-index: -1;
+}
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px) rotate(-10deg) scale(0.9);
+  }
+  100% {
+    transform: translate(-600px, -100px) rotate(0deg) scale(1.1);
+  }
+}
