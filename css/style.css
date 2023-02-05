@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;
@@ -254,7 +254,7 @@ body {
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
   pointer-events: none;
   background: url(/assets/images/grain.gif);
@@ -294,4 +294,32 @@ body {
 }
 .projects .cursor.hover .mouse {
   opacity: 1;
+}
+
+/* conact page */
+.contact-content {
+  font-family: var(--header-font);
+}
+.contact-content h1 {
+  text-transform: uppercase;
+}
+.contact-content a {
+  text-decoration: none;
+  color: mintcream;
+}
+.contact-content .btn {
+  border-width: 0 !important;
+}
+.contact-content .btn:active {
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+/* header */
+.navbar {
+  font-family: var(--header-font) !important;
+}
+
+.bg-dark {
+  background: var(--primary-color) !important;
 }

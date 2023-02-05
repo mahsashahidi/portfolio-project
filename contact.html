@@ -34,7 +34,7 @@
     ></script>
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Mahsa Shahidi - Works</title>
+    <title>Mahsa Shahidi- Contact</title>
   </head>
   <body>
     <header>
@@ -63,94 +63,51 @@
                 <a class="nav-link" href="/about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/works.html">Work</a>
+                <a class="nav-link" href="/works.html">Work</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
+                <a class="nav-link active" href="/contact.html">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <div class="projects">
-      <div class="noise">
-        <div class="cursor inner">
-          <span class="mouse"> View Project </span>
-        </div>
-        <h1>Works</h1>
-        <div class="container">
-          <div class="block block-1">
-            <a href="#"><img src="/assets/images/landing.png" alt="" /></a>
-            <h2>Landing Page</h2>
-            <div class="notes">
-              <p>
-                A design of a minimal landing page for a new-media art website
-                was one of the earliest front-end developing experiences I've
-                had. This project is built usong HTML, CSS, and Javascript.
-              </p>
-            </div>
-          </div>
 
-          <div class="block block-2">
-            <a href="#"><img src="/assets/images/weather.png" alt="" /></a>
-            <h2>Weather App</h2>
-            <div class="notes">
-              <p>
-                With the skills I gained from the SheCodes workshops, I built a
-                Vanilla JavaScript weather app. Built using HTML, CSS,
-                JavaScript. Two APIs have been used for this project, one for
-                weather report and forecast, and the other for moon phase.
-              </p>
-            </div>
-          </div>
-
-          <div class="block block-3">
-            <a href="#"><img src="/assets/images/login.png" alt="" /></a>
-            <h2>Login Form</h2>
-            <div class="notes">
-              <p>
-                Design of a glassmorphism login form with hover effect. Built
-                using HTML, CSS, and JavaScript.
-              </p>
-            </div>
+    <!-- contact -->
+    <span class="contact-content d-flex justify-content-center"
+      ><h1 class="mb-1 pb-0 mt-5">Contact</h1></span
+    >
+    <div class="contact-content d-flex justify-content-center mt-5">
+      <!-- <h1 class="mb-5">Contact</h1> -->
+      <form class="me-3">
+        <div class="mb-3">
+          <label class="form-label">Your email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
           </div>
         </div>
+        <div class="mb-3">
+          <label class="form-label">Your message</label>
+          <textarea name="message" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">Send</button>
+      </form>
+      <div class="ms-5">
+        <h3>Email</h3>
+        <a href="mailto:shahidimahsa93@gmail.com">shahidimahsa93@gmail.com</a>
+        <h3 class="mt-3">Twitter</h3>
+        <a href="https://twitter.com/mahsashahidi">@mahsashahidi</a>
+        <h3 class="mt-3">Linkedin</h3>
+        <a href="https://www.linkedin.com/in/mahsa-shahidi/">@mahsa-shahidi</a>
       </div>
     </div>
-    <script src="/script/index.js"></script>
-    <script>
-      let blocks = document.getElementsByClassName("block");
-      let container = document.getElementsByClassName("container");
-      let scroll = new HorizontalScroll.default({
-        blocks: blocks,
-        container: container,
-        isAnimated: true,
-        springEffect: 5,
-        skewReducer: 20,
-      });
-
-      const cursor = document.querySelectorAll(".cursor");
-      const links = document.querySelectorAll(".block");
-
-      window.addEventListener("mousemove", (e) => {
-        let x = e.pageX;
-        let y = e.pageY;
-
-        cursor.forEach((el) => {
-          el.style.left = `${x}px`;
-          el.style.top = `${y}px`;
-
-          links.forEach((link) => {
-            link.addEventListener("mouseenter", () => {
-              el.classList.add("hover");
-            });
-            link.addEventListener("mouseleave", () => {
-              el.classList.remove("hover");
-            });
-          });
-        });
-      });
-    </script>
   </body>
 </html>
