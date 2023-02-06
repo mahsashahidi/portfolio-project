@@ -352,6 +352,10 @@ footer .mainFooter p {
   font-family: "Libre Barcode 128 Text", cursive;
   /* font-family: "Libre Barcode 39 Text", cursive; */
 }
+footer .mainFooter .git-source {
+  font-size: 12px;
+}
+
 footer .mainFooter .sns a {
   color: var(--primary-color);
   text-decoration: none;
@@ -405,6 +409,6 @@ svg:hover path {
     transform: translate(0px, 0px) rotate(-10deg) scale(0.9);
   }
   100% {
-    transform: translate(-600px, -100px) rotate(0deg) scale(1.1);
+    transform: translate(-600px, -90px) rotate(0deg) scale(1.09);
   }
 }
