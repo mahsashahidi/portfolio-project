@@ -335,8 +335,10 @@ footer {
   color: var(--primary-color);
   position: absolute;
   margin-top: 20px;
+  bottom: -5px;
+
   /* top: 90%; */
-  bottom: 0;
+  /* bottom: 0; */
   width: 100%;
 }
 footer .mainFooter {
@@ -381,7 +383,16 @@ hr {
   margin: 2rem 10rem;
   z-index: 1;
 }
-
+.about-content p {
+  text-align: start;
+}
+.about-content p a {
+  color: var(--secondary-color);
+}
+.about-content p:hover {
+  font-weight: bold;
+  text-shadow: 0 0 5px rgb(186, 187, 186);
+}
 svg {
   width: 45%;
   filter: blur(10px);
@@ -404,11 +415,11 @@ svg:hover path {
   animation: move 20s infinite alternate;
   z-index: -1;
 }
-@keyframes move {
+/* @keyframes move {
   0% {
     transform: translate(0px, 0px) rotate(-10deg) scale(0.9);
   }
   100% {
     transform: translate(-600px, -90px) rotate(0deg) scale(1.09);
   }
-}
+} */
