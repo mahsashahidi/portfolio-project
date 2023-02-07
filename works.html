@@ -42,7 +42,7 @@
       <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mahsa Shahidi</a>
+            <a class="navbar-brand" href="/">Mahsa Shahidi</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -81,7 +81,43 @@
             <span class="mouse"> View Project </span>
           </div>
           <h1>Works</h1>
-          <div class="contain mt-0">
+          <!-- for smallScreen -->
+          <div class="container gallery-smallScreen d-sm-block d-md-none">
+            <div>
+              <a href="#"><h2>Landing Page</h2></a>
+
+              <div class="notes-small">
+                <p>
+                  A design of a minimal landing page built usong HTML, CSS, and
+                  Javascript.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#"><h2>Weather App</h2></a>
+
+              <div class="notes-small">
+                <p>
+                  Vanilla JavaScript weather app. Built using HTML, CSS,
+                  JavaScript. Two APIs have been used for this project, one for
+                  weather report and forecast, and the other for moon phase.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#"><h2>Login Form</h2></a>
+              <div class="notes-small">
+                <p>
+                  Design of a glassmorphism login form with hover effect. Built
+                  using HTML, CSS, and JavaScript.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- for bigScreen -->
+          <div class="contain mt-0 d-none d-md-block">
             <div class="block block-1">
               <a href="#"
                 ><img
@@ -150,8 +186,7 @@
               >open-sourced</a
             ></span
           >
-          <span class="git-source d-sm-block d-md-none"
-            >Website was
+          <span class="git-source d-sm-block d-md-none">
             <a href="https://github.com/mahsashahidi/portfolio-project"
               >coded</a
             >
