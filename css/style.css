@@ -191,7 +191,7 @@ body {
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.45;
+  opacity: 0.5;
   z-index: -1;
   pointer-events: none;
   background: url(/assets/images/grain.gif);
