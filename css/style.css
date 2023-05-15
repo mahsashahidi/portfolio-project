@@ -44,7 +44,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 .hero h1 {
   color: var(--secondary-color);
@@ -252,7 +252,7 @@ body {
 /* about */
 .about-content {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: var(--header-font);
   /* margin: 2rem 10rem; */
   z-index: 1;

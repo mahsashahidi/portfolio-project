@@ -576,12 +576,12 @@ video {
   top: 1rem;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .z-10 {
   z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .mx-3 {
@@ -713,9 +713,8 @@ video {
   height: 100%;
 }
 
-.min-h-max {
-  min-height: -moz-max-content;
-  min-height: max-content;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-16 {
@@ -978,16 +977,16 @@ video {
   padding-top: 1rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
 
 .text-right {
   text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .font-barcode {
@@ -1196,7 +1195,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .hero h1 {
@@ -1417,7 +1416,7 @@ body {
 
 .about-content {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: var(--header-font);
   /* margin: 2rem 10rem; */
   z-index: 1;
@@ -1696,12 +1695,21 @@ svg:hover path {
   .md\:text-\[7rem\] {
     font-size: 7rem;
   }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .lg\:mt-9 {
+    margin-top: 2.25rem;
   }
 
   .lg\:flex {
