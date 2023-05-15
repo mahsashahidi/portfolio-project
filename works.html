@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,227 +21,345 @@
       src="https://kit.fontawesome.com/4da35cc13b.js"
       crossorigin="anonymous"
     ></script>
-    <!-- bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
     <meta name="description" content="Project works of Mahsa Shahidi" />
     <title>Mahsa Shahidi - Projects</title>
   </head>
-  <body>
-    <div class="container-fluid">
-      <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">Mahsa Shahidi</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+  <body class="overflow-x-hidden">
+    <header>
+      <nav class="font-garamond fixed w-full bg-stone-950">
+        <section class="flex flex-row mx-5 items-center py-2.5">
+          <a
+            class="brand no-underline text-stone-50 text-brand mr-auto"
+            href="/"
+            >Mahsa Shahidi</a
+          >
+          <button
+            id="hamburger"
+            class="ml-auto nav-toggler lg:hidden cursor-pointer text-lg text-stone-200 w-8 h-8 relative"
+            data-target="#navigation"
+          >
+            <!-- &#9776 -->
+            <!-- <i class="ri-menu-3-line text-lg text-stone-200"></i> -->
+            <div
+              class="w-6 h-[2px] rounded absolute bg-stone-200 top-4 transition-all duration-600 before:content-[''] before:w-6 before:h-[2px] before:rounded before:absolute before:bg-stone-200 before:-translate-x-3 before:-translate-y-[5px] before:transition-all before:duration-600 after:w-6 after:h-[2px] after:rounded after:absolute after:bg-stone-200 after: after:-translate-x-3 after:translate-y-[5px] after:transition-all after:duration-600"
+            ></div>
+          </button>
+          <div class="">
+            <div
+              class="hidden w-full lg:flex flex-row ml-auto text-stone-400 gap-x-4 text-md"
             >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul
-                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end"
+              <a
+                class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                aria-current="page"
+                href="/"
+                >Home</a
               >
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/about.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/works.html">Work</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/contact.html">Contact</a>
-                </li>
-              </ul>
+              <a
+                class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                href="/about.html"
+                >About</a
+              >
+              <a
+                class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                href="/techstack.html"
+                ><span class="pe-[2px]">Tech</span
+                ><span class="">Stack</span></a
+              >
+              <a class="nav-link text-stone-200" href="/works.html">Work</a>
+              <a
+                class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                href="/contact.html"
+                >Contact</a
+              >
             </div>
           </div>
-        </nav>
-      </header>
-      <div class="projects">
-        <div class="noise">
-          <div class="cursor inner">
-            <span class="mouse"> View Project </span>
+        </section>
+        <section
+          id="mobile-menu"
+          class="hidden absolute top-68 bg-stone-950 w-full text-lg flex-col justify-content-center origin-top animate-open-menu"
+        >
+          <!-- <button class="text-5xl text-right px-6">
+              &times;
+            </button> -->
+          <nav
+            class="flex flex-col min-h-max items-center py-8"
+            aria-label="mobile"
+          >
+            <a href="/" class="w-full py-3 text-center hover:opacity-80"
+              >Home</a
+            >
+            <a
+              href="/about.html"
+              class="w-full py-3 text-center hover:opacity-80"
+              >About</a
+            >
+            <a href="/" class="w-full py-3 text-center hover:opacity-80"
+              >Tech Stack</a
+            >
+            <a href="#hero" class="w-full py-3 text-center hover:opacity-80"
+              >Work</a
+            >
+            <a
+              href="/contact.html"
+              class="w-full py-3 text-center hover:opacity-80"
+              >Contact</a
+            >
+          </nav>
+        </section>
+      </nav>
+    </header>
+    <div class="flex flex-col">
+      <div class="cursor z-50">
+        <span class="mouse font-garamond"> View Project </span>
+      </div>
+      <div class="noise lg:cursor-none" id="hero">
+        <!-- main body *****-->
+        <h1 class="text-7xl font-garamond my-10 pt-12 pb-5">Works</h1>
+        <div class="gallery flex flex-col gap-36 font-garamond mx-5 md:px-3">
+          <div class="project-1 flex flex-col md:flex-row gap-5">
+            <div
+              class="project md:w-1/2 border-2 border-stone-800 shadow-stone-600 shadow-3xl rounded"
+            >
+              <a
+                href="https://natureward-store.netlify.app/"
+                alt="eCommerce Website"
+                target="_blank"
+              >
+                <img
+                  src="/assets/images/e-commerce.webp"
+                  alt="eCommerce Website"
+                  id="project"
+                />
+              </a>
+            </div>
+            <div class="flex flex-col gap-1.5 md:w-1/2">
+              <h2 class="text-4xl mb-3">e-Commerce Website</h2>
+              <p class="text-md mb-3">
+                UI / UX design of an eCommerce website. Built using React and
+                Tailwind CSS. Redux Toolkit is used for state managements.
+              </p>
+              <div class="flex flex-row gap-2 justify-center">
+                <a
+                  href="https://natureward-store.netlify.app/"
+                  alt="eCommerce Website"
+                  target="_blank"
+                >
+                  <img
+                    src="/assets/images/netlify-logo.png"
+                    width="32px"
+                    alt="Netlify"
+                    class="bg-white/90 rounded-full p-1 hover:scale-105"
+                  />
+                </a>
+                <a
+                  href="https://github.com/mahsashahidi/react-ecommerce-app"
+                  alt="eCommerce Website"
+                  target="_blank"
+                >
+                  <img
+                    src="/assets/images/github-logo.png"
+                    width="32px"
+                    alt="Github"
+                    class="bg-white/90 rounded-full p-1 hover:scale-105"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
-          <h1>Works</h1>
-          <!-- for smallScreen -->
-          <div class="container gallery-smallScreen d-sm-block d-md-none">
-            <div>
-              <a href="#"><h2>Landing Page</h2></a>
-
-              <div class="notes-small">
-                <p>
-                  A design of a minimal landing page built usong HTML, CSS, and
-                  Javascript.
-                </p>
+          <div class="project-2 flex flex-col md:flex-row gap-5">
+            <div class="flex flex-col gap-1.5 md:w-1/2">
+              <h2 class="text-4xl mb-3">Weather App</h2>
+              <p class="text-md mb-3">
+                My love for PC-98 style pixel art had me choose this retro
+                design for my first-ever React weather app. The API used for
+                this app is "OpenWeatherMap". The CSS framework used for this
+                app is bootstrap. This was my final project for SheCodes React
+                course and workshops.
+              </p>
+              <div class="flex flex-row gap-2 justify-center">
+                <a
+                  href="https://pc98-weather-app.netlify.app/"
+                  alt="Weather App"
+                  target="_blank"
+                >
+                  <img
+                    src="/assets/images/netlify-logo.png"
+                    width="32px"
+                    alt="Netlify"
+                    class="bg-white/90 rounded-full p-1 hover:scale-105"
+                  />
+                </a>
+                <a
+                  href="https://github.com/mahsashahidi/react-weather-app"
+                  alt="Weather App"
+                  target="_blank"
+                >
+                  <img
+                    src="/assets/images/github-logo.png"
+                    width="32px"
+                    alt="Github"
+                    class="bg-white/90 rounded-full p-1 hover:scale-105"
+                  />
+                </a>
+                <a
+                  href="https://www.shecodes.io/workshops/shecodes-react-5778517b-4381-42df-9a67-b5c9a98efc90/projects/1529765"
+                  alt="Weather App"
+                  target="_blank"
+                >
+                  <img
+                    src="/assets/images/shecodes-logo.png"
+                    width="32px"
+                    alt="SheCodes"
+                    class="bg-white/90 rounded-full p-1 hover:scale-105"
+                  />
+                </a>
               </div>
             </div>
-
-            <div>
-              <a href="#"><h2>Weather App</h2></a>
-
-              <div class="notes-small">
-                <p>
-                  Vanilla JavaScript weather app. Built using HTML, CSS,
-                  JavaScript. Two APIs have been used for this project, one for
-                  weather report and forecast, and the other for moon phase.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <a href="#"><h2>Login Form</h2></a>
-              <div class="notes-small">
-                <p>
-                  Design of a glassmorphism login form with hover effect. Built
-                  using HTML, CSS, and JavaScript.
-                </p>
-              </div>
+            <div
+              class="project md:w-1/2 border-2 border-stone-800 shadow-stone-600 shadow-3xl rounded"
+            >
+              <!-- hover:scale-[1.015] transition ease duration-700 -->
+              <a
+                href="https://pc98-weather-app.netlify.app/"
+                alt="Weather App"
+                target="_blank"
+              >
+                <img
+                  src="/assets/images/weather.webp"
+                  alt="Weather App"
+                  id="project"
+                />
+              </a>
             </div>
           </div>
-          <!-- for bigScreen -->
-          <div class="contain mt-0 d-none d-md-block">
-            <div class="block block-1">
-              <a href="#"
-                ><img
-                  src="/assets/images/landing.png"
-                  alt="Landing page project"
-                  class="img-fluid"
-              /></a>
-              <h2>Landing Page</h2>
-              <div class="notes">
-                <p>
-                  A design of a minimal landing page for a new-media art website
-                  was one of the earliest front-end developing experiences I've
-                  had. This project is built usong HTML, CSS, and Javascript.
-                </p>
-              </div>
+          <div
+            class="project-3 flex flex-col md:flex-row justify-center mb-20 gap-5"
+          >
+            <div
+              class="project md:w-1/2 border-2 border-stone-800 shadow-stone-600 shadow-3xl rounded"
+            >
+              <a
+                href="https://codepen.io/mahsashahidi/full/yLROEMo"
+                alt="Geometric Art Generator"
+                target="_blank"
+              >
+                <img
+                  src="/assets/images/geometry.webp"
+                  alt="Geometric Art Generator"
+                  id="project"
+                />
+              </a>
             </div>
-
-            <div class="block block-2">
-              <a href="#"
-                ><img
-                  src="/assets/images/weather.png"
-                  alt="Weather app project"
-                  class="img-fluid"
-              /></a>
-              <h2>Weather App</h2>
-              <div class="notes">
-                <p>
-                  With the skills I gained from the SheCodes workshops, I built
-                  a Vanilla JavaScript weather app. Built using HTML, CSS,
-                  JavaScript. Two APIs have been used for this project, one for
-                  weather report and forecast, and the other for moon phase.
-                </p>
-              </div>
-            </div>
-
-            <div class="block block-3">
-              <a href="#"
-                ><img
-                  src="/assets/images/login.png"
-                  alt="Login form project"
-                  class="img-fluid"
-              /></a>
-              <h2>Login Form</h2>
-              <div class="notes">
-                <p>
-                  Design of a glassmorphism login form with hover effect. Built
-                  using HTML, CSS, and JavaScript.
-                </p>
+            <div class="flex flex-col gap-1.5 md:w-1/2">
+              <h2 class="text-4xl mb-3">Geometric Art Generator</h2>
+              <p class="text-md mb-3">
+                A simple app to generate geometric shapes with random shapes and
+                colors. HTML, Tailwind CSS and Javascript is used for this mini
+                project.
+              </p>
+              <div class="flex flex-row gap-2 justify-center">
+                <a
+                  href="https://codepen.io/mahsashahidi/full/yLROEMo"
+                  alt="Geometric Art Generator"
+                  target="_blank"
+                >
+                  <img
+                    src="/assets/images/codepen-logo.png"
+                    width="32px"
+                    alt="codepen"
+                    class="bg-white/90 rounded-full p-1 hover:scale-105"
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- footer -->
-    <div class="footer align-self-end">
-      <footer>
+
+      <!-- footer -->
+      <div class="bg-white text-black pt-2 pb-2 w-full">
         <div
-          class="mainFooter d-flex justify-content-between align-items-center align-self-end"
+          class="top flex flex-row justify-between items-center mx-3.5 text-xl"
         >
-          <p class="bigscreen d-none d-md-block">Mahsa Shahidi</p>
-          <p class="smallscreen d-sm-block d-md-none">Mahsa Shahidi</p>
-          <span class="git-source d-none d-md-block"
-            >This website was coded by Mahsa Shahidi, and is
-            <a href="https://github.com/mahsashahidi/portfolio-project"
-              >open-sourced</a
-            ></span
-          >
-          <span class="git-source d-sm-block d-md-none">
-            <a href="https://github.com/mahsashahidi/portfolio-project"
-              >coded</a
-            >
-            by Mahsa Shahidi</span
-          >
-          <div class="sns d-flex justify-content-center">
-            <a href="https://github.com/mahsashahidi"
+          <div class="font-barcode text-4xl">Mahsa Shahidi</div>
+          <div class="icons flex flex-row items-center gap-3 text-2xl">
+            <a href="https://github.com/mahsashahidi" class="text-black"
               ><i class="fa fa-github" aria-hidden="true"></i
             ></a>
-            <a href="https://www.linkedin.com/in/mahsa-shahidi/"
+            <a
+              href="https://www.linkedin.com/in/mahsa-shahidi/"
+              class="text-black"
               ><i class="fa fa-linkedin" aria-hidden="true"></i
             ></a>
-            <a href="https://twitter.com/mahsashahidi"
+            <a href="https://twitter.com/mahsashahidi" class="text-black"
               ><i class="fa fa-twitter" aria-hidden="true"></i
             ></a>
           </div>
         </div>
-        <hr />
-        <span class="copyright">All Rights Received &copy; 2023</span>
-      </footer>
+        <hr class="mt-2 mb-2" />
+        <div class="bottom justify-center text-sm">
+          <span class="">&copy; 2023 Mahsa Shahidi</span>
+        </div>
+      </div>
     </div>
-    <script src="/script/index.js"></script>
-    <script>
-      let blocks = document.getElementsByClassName("block");
-      let container = document.getElementsByClassName("contain");
-      let scroll = new HorizontalScroll.default({
-        blocks: blocks,
-        container: container,
-        isAnimated: true,
-        springEffect: 5,
-        skewReducer: 20,
-      });
+    <script src="/script/index.js" defer></script>
 
+    <script>
       const cursor = document.querySelectorAll(".cursor");
-      const links = document.querySelectorAll(".block");
+      const links = document.querySelectorAll("#project");
 
       window.addEventListener("mousemove", (e) => {
-        let x = e.pageX;
-        let y = e.pageY;
+        if (window.innerWidth - e.pageX <= 30) {
+          let x = e.pageX - 30;
+          let y = e.pageY - 30;
+          cursor.forEach((el) => {
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
 
-        cursor.forEach((el) => {
-          el.style.left = `${x}px`;
-          el.style.top = `${y}px`;
-
-          links.forEach((link) => {
-            link.addEventListener("mouseenter", () => {
-              el.classList.add("hover");
-            });
-            link.addEventListener("mouseleave", () => {
-              el.classList.remove("hover");
+            links.forEach((link) => {
+              link.addEventListener("mouseenter", () => {
+                el.classList.add("hover");
+              });
+              link.addEventListener("mouseleave", () => {
+                el.classList.remove("hover");
+              });
             });
           });
-        });
+        } else {
+          let x = e.pageX;
+          let y = e.pageY;
+          cursor.forEach((el) => {
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
+
+            links.forEach((link) => {
+              link.addEventListener("mouseenter", () => {
+                el.classList.add("hover");
+              });
+              link.addEventListener("mouseleave", () => {
+                el.classList.remove("hover");
+              });
+            });
+          });
+        }
       });
+
+      const initNavBtn = () => {
+        const hamburgerBtn = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        const toggleMenu = () => {
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("flex");
+          hamburgerBtn.classList.toggle("toggle-btn");
+        };
+        hamburgerBtn.addEventListener("click", toggleMenu);
+        mobileMenu.addEventListener("click", toggleMenu);
+      };
+      document.addEventListener("DOMContentLoaded", initNavBtn);
     </script>
   </body>
 </html>

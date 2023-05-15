@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Corben:wght@700&family=Cormorant+Garamond:wght@400;500;600;700&family=Covered+By+Your+Grace&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Text&family=Libre+Baskerville:wght@400;700&family=Love+Light&family=Lusitana&family=Megrim&family=Montserrat&family=Nunito&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Corben:wght@700&family=Cormorant+Garamond:wght@400;500;600;700&family=Covered+By+Your+Grace&family=Sorts+Mill+Goudy&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Text&family=Libre+Baskerville:wght@400;700&family=Love+Light&family=Lusitana&family=Megrim&family=Montserrat&family=Nunito&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
     <!-- icons -->
@@ -21,10 +21,11 @@
       src="https://kit.fontawesome.com/4da35cc13b.js"
       crossorigin="anonymous"
     ></script>
+
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
-    <meta name="description" content="Contact information of Mahsa Shahidi" />
-    <title>Mahsa Shahidi - Contact</title>
+    <meta name="description" content="Tech Stacks - Mahsa Shahidi" />
+    <title>Tech Stacks - Mahsa Shahidi</title>
   </head>
   <body>
     <div class="flex flex-col">
@@ -62,9 +63,7 @@
                   href="/about.html"
                   >About</a
                 >
-                <a
-                  class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
-                  href="/techstack.html"
+                <a class="nav-link text-stone-200" href="/techstack.html"
                   ><span class="pe-[2px]">Tech</span
                   ><span class="">Stack</span></a
                 >
@@ -73,7 +72,9 @@
                   href="/works.html"
                   >Work</a
                 >
-                <a class="nav-link text-stone-200" href="/contact.html"
+                <a
+                  class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                  href="/contact.html"
                   >Contact</a
                 >
               </div>
@@ -118,72 +119,113 @@
         </nav>
       </header>
 
-      <!-- contact -->
-
-      <span class="contact-content flex justify-center"
-        ><h1 class="mb-1 pb-0 mt-9 pt-2 text-5xl">Contact</h1></span
-      >
       <div
-        class="contact-content flex flex-col md:flex-row gap-8 md:gap-16 justify-center mt-5 pb-9"
+        class="mt-5 py-16 px-5 mx-auto my-auto justify-center w-2/3 bg-stone-100 text-black"
       >
-        <!-- <h1 class="mb-5">Contact</h1> -->
-        <form class="mx-5 md:mx-0 font-baskerville text-sm">
-          <div class="mb-4 flex flex-col">
-            <label class="mb-2">Your email:</label>
-            <input
-              type="email"
-              class="rounded py-1 w-full md:w-72 text-black"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              required
-              placeholder="email"
-            />
-          </div>
-          <div class="mb-3 flex flex-col">
-            <label class="mb-2">Your message:</label>
-            <textarea
-              name="message"
-              class="rounded w-full md:w-72 pb-12 text-black"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="bg-stone-100 text-black py-2 px-3 rounded transition-all ease-in duration-300 hover:rounded-2xl"
-          >
-            Send
-          </button>
-        </form>
-        <div class="flex flex-col">
-          <div
-            class="flex flex-row md:flex-col justify-center gap-2 lg:gap-0 items-center"
-          >
-            <h3 class="text-xl md:text-3xl">Email</h3>
-            <a href="mailto:shahidimahsa93@gmail.com" class="text-md"
-              >shahidimahsa93@gmail.com</a
-            >
-          </div>
-          <div
-            class="flex flex-row md:flex-col mt-3 md:mt-6 justify-center gap-2 lg:gap-0 items-center"
-          >
-            <h3 class="text-xl md:text-3xl">Twitter</h3>
-            <a href="https://twitter.com/mahsashahidi" class="text-md"
-              >@mahsashahidi</a
-            >
-          </div>
-          <div
-            class="flex flex-row md:flex-col mt-3 md:mt-6 justify-center gap-2 lg:gap-0 items-center"
-          >
-            <h3 class="text-xl md:text-3xl">Linkedin</h3>
-            <a href="https://www.linkedin.com/in/mahsa-shahidi/" class="text-md"
-              >@mahsa-shahidi</a
-            >
-          </div>
+        <h1
+          class="mb-1 text-3xl md:text-5xl font-bold tracking-wide font-baskerville"
+        >
+          Tech Stack
+        </h1>
+        <span class="font-garamond text-md"
+          >Technologies I've been working with recently. I'm always
+          learning</span
+        >
+        <div
+          class="mt-6 inline-flex flex-wrap gap-7 justify-center items-center"
+        >
+          <img
+            src="/assets/images/html5-svg.svg"
+            alt="HTML5"
+            class="w-16 md:w-20 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/css-3-svg.svg"
+            alt="CSS3"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/javascript-svg.svg"
+            alt="JavaScript"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/react-svg.svg"
+            alt="React.js"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/tailwind-svg.svg"
+            alt="Tailwind"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/bootstrap-svg.svg"
+            alt="Bootstrap"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/visual-studio-code-svg.svg"
+            alt="VSCode"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/git-svg.svg"
+            alt="Git"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/github-svg.svg"
+            alt="GitHub"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/seo-svg.svg"
+            alt="SEO"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/figma-svg.svg"
+            alt="Figma"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+          <img
+            src="/assets/images/netlify-svg.svg"
+            alt="Netlify"
+            class="w-20 md:w-24 hover:-translate-y-1 cursor-pointer"
+          />
+        </div>
+      </div>
+      <div class="my-12">
+        <h2
+          class="mb-1 text-5xl font-bold tracking-wide font-baskerville text-stone-100"
+        >
+          Certificates
+        </h2>
+        <span class="font-garamond text-md"
+          >Here are my most recent certificates I have earned. Click to view the
+          verified certificates.</span
+        >
+        <div
+          class="mt-9 mb-5 flex flex-col md:flex-row justify-center gap-12 md:gap-5 lg:gap-24"
+        >
+          <a
+            href="https://shecodes.io/certificates/2b0da39302381725585a37298e851a05"
+            target="_blank"
+            class="mx-9 md:mx-0 md:w-1/3 hover:scale-[1.01] transition duration-200"
+            ><img src="/assets/images/127919.png" alt="Responsive"
+          /></a>
+          <a
+            href="https://shecodes.io/certificates/1355504ee5e28126ac568ac32ccee1b3"
+            target="_blank"
+            class="mx-9 md:mx-0 md:w-1/3 hover:scale-[1.01] transition duration-200"
+            ><img src="/assets/images/135779.png" alt="React"
+          /></a>
         </div>
       </div>
     </div>
     <!-- footer -->
-    <div class="bg-white text-black pt-2 pb-2 w-full absolute bottom-0">
+    <div class="bg-white text-black pt-2 pb-2 w-full">
       <div
         class="top flex flex-row justify-between items-center mx-3.5 text-xl"
       >

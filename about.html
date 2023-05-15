@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,18 +21,7 @@
       src="https://kit.fontawesome.com/4da35cc13b.js"
       crossorigin="anonymous"
     ></script>
-    <!-- bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
     <meta
@@ -41,68 +31,96 @@
     <title>Mahsa Shahidi - About</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/" title="Homepage - Mahsa Shahidi"
+    <div class="flex flex-col">
+      <header class="mb-16">
+        <nav class="font-garamond fixed w-full bg-stone-950">
+          <section class="flex flex-row mx-3 px-2 items-center py-2.5">
+            <a
+              class="brand no-underline text-stone-50 text-brand mr-auto"
+              href="/"
               >Mahsa Shahidi</a
             >
             <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              id="hamburger"
+              class="ml-auto nav-toggler lg:hidden cursor-pointer text-lg text-stone-200 w-8 h-8 relative"
+              data-target="#navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <!-- &#9776 -->
+              <!-- <i class="ri-menu-3-line text-lg text-stone-200"></i> -->
+              <div
+                class="w-6 h-[2px] rounded absolute bg-stone-200 top-4 transition-all duration-600 before:content-[''] before:w-6 before:h-[2px] before:rounded before:absolute before:bg-stone-200 before:-translate-x-3 before:-translate-y-[5px] before:transition-all before:duration-600 after:w-6 after:h-[2px] after:rounded after:absolute after:bg-stone-200 after: after:-translate-x-3 after:translate-y-[5px] after:transition-all after:duration-600"
+              ></div>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul
-                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end"
+            <div class="">
+              <div
+                class="hidden w-full lg:flex flex-row ml-auto text-stone-400 gap-x-4 text-md"
               >
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="/"
-                    title="Homepage - Mahsa Shahidi"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    href="/about.html"
-                    title="About - Mahsa Shahidi"
-                    >About</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/works.html"
-                    title="Projects - Mahsa Shahidi"
-                    >Work</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="/contact.html"
-                    title="Contact - Mahsa Shahidi"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
+                <a
+                  class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                  aria-current="page"
+                  href="/"
+                  >Home</a
+                >
+                <a class="nav-link text-stone-200" href="/about.html">About</a>
+                <a
+                  class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                  href="/techstack.html"
+                  ><span class="pe-[2px]">Tech</span
+                  ><span class="">Stack</span></a
+                >
+                <a
+                  class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                  href="/works.html"
+                  >Work</a
+                >
+                <a
+                  class="nav-link text-stone-400 transition duration-300 hover:text-stone-300"
+                  href="/contact.html"
+                  >Contact</a
+                >
+              </div>
             </div>
-          </div>
+          </section>
+          <section
+            id="mobile-menu"
+            class="hidden absolute top-68 bg-stone-950 w-full text-lg flex-col justify-content-center origin-top animate-open-menu"
+          >
+            <!-- <button class="text-5xl text-right px-6">
+              &times;
+            </button> -->
+            <nav
+              class="flex flex-col min-h-max items-center py-8"
+              aria-label="mobile"
+            >
+              <a href="/" class="w-full py-3 text-center hover:opacity-80"
+                >Home</a
+              >
+              <a
+                href="/about.html"
+                class="w-full py-3 text-center hover:opacity-80"
+                >About</a
+              >
+              <a
+                href="/techstack.html"
+                class="w-full py-3 text-center hover:opacity-80"
+                >Tech Stack</a
+              >
+              <a
+                href="/works.html"
+                class="w-full py-3 text-center hover:opacity-80"
+                >Work</a
+              >
+              <a
+                href="/contact.html"
+                class="w-full py-3 text-center hover:opacity-80"
+                >Contact</a
+              >
+            </nav>
+          </section>
         </nav>
       </header>
       <!-- content -->
-      <div class="ha d-none d-md-block">
+      <div class="ha hidden md:block cursor-pointer">
         <svg
           style="width: 0; height: 0; position: absolute"
           aria-hidden="true"
@@ -139,53 +157,52 @@
       <div class="about-content">
         <!-- bio -->
         <div class="bio-content">
-          <h1 class="mb-4 mt-5 ms-5 me-5 pt-4">Hi, I'm Mahsa Shahidi</h1>
-          <h4
-            class="mb-0 ms-5 me-5 text-center d-flex align-items-center flex-column mt-5 ms-5 me-5"
-          >
-            A Front-end developer based in Iran. I'm specialized in responsive
-            development. I enjoy using creative coding to breathe meaningful
-            message into what I create. I’m currently seeking new opportunities
-            in front-end development. I’m open to work remotely and have
-            flexible hours.
-          </h4>
-          <div class="mt-0">
+          <h1 class="mb-4 mt-3 md:mt-7 mx-5 pt-4 text-4xl">
+            Hi, I'm Mahsa Shahidi
+          </h1>
+          <p class="mt-5 mx-7 md:mx-40 lg:mx-64 text-xl text-left">
+            I am a Front-End developer specializing in React development. And I
+            always say yes to doing "creative coding" to add memorable and
+            visually pleasing experiences to my works. I am currently seeking
+            new remote opportunities in front-end development.
+            <br />
+            I was previously a Computer Vision researcher, then I fell in love
+            with JavaScript and dedicated my time to it. Creating websites/apps
+            gives me a similar joy that Bob Ross had while painting.
+          </p>
+          <div class="mt-3 underline">
             <a href="/contact.html" title="Contact Mahsa Shahidi"
               >Let's get in touch</a
             >
           </div>
         </div>
       </div>
-    </div>
-    <!-- footer -->
-    <footer>
-      <div class="mainFooter d-flex justify-content-between align-items-center">
-        <p class="bigscreen d-none d-md-block">Mahsa Shahidi</p>
-        <p class="smallscreen d-sm-block d-md-none">Mahsa Shahidi</p>
-        <span class="git-source d-none d-md-block"
-          >This website was coded by Mahsa Shahidi, and is
-          <a href="https://github.com/mahsashahidi/portfolio-project"
-            >open-sourced</a
-          ></span
+
+      <!-- footer -->
+      <div class="bg-stone-50 text-black pt-2 pb-2 absolute w-full bottom-0">
+        <div
+          class="top flex flex-row justify-between items-center mx-3.5 text-xl"
         >
-        <span class="git-source d-sm-block d-md-none">
-          <a href="https://github.com/mahsashahidi/portfolio-project">coded</a>
-          by Mahsa Shahidi</span
-        >
-        <div class="sns d-flex justify-content-center">
-          <a href="https://github.com/mahsashahidi"
-            ><i class="fa fa-github" aria-hidden="true"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/mahsa-shahidi/"
-            ><i class="fa fa-linkedin" aria-hidden="true"></i
-          ></a>
-          <a href="https://twitter.com/mahsashahidi"
-            ><i class="fa fa-twitter" aria-hidden="true"></i
-          ></a>
+          <div class="font-barcode text-4xl">Mahsa Shahidi</div>
+          <div class="icons flex flex-row items-center gap-3 text-2xl">
+            <a href="https://github.com/mahsashahidi" class="text-black"
+              ><i class="fa fa-github" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mahsa-shahidi/"
+              class="text-black"
+              ><i class="fa fa-linkedin" aria-hidden="true"></i
+            ></a>
+            <a href="https://twitter.com/mahsashahidi" class="text-black"
+              ><i class="fa fa-twitter" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <hr class="mt-2 mb-2" />
+        <div class="bottom justify-center text-sm">
+          <span class="">&copy; 2023 Mahsa Shahidi</span>
         </div>
       </div>
-      <hr />
-      <span class="copyright">All Rights Received &copy; 2023</span>
-    </footer>
+    </div>
   </body>
 </html>
